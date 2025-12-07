@@ -33,15 +33,16 @@ import com.example.lab4notesreminderapp.utility.ReminderService
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
-
+// ViewModel instance to manage data in a lifecycle-aware way (Part D)
     private lateinit var noteViewModel: NoteViewModel
+    // Adapter to link the list of notes (LiveData) to the RecyclerView (Part D)
     private lateinit var noteAdapter: NoteAdapter
 
     private lateinit var titleInput: EditText
     private lateinit var contentInput: EditText
     private lateinit var addButton: Button
     private lateinit var recyclerView: RecyclerView
-
+// Constant channel ID required for posting notifications on Android 8.0+ (Part E)
     private val CHANNEL_ID = "reminder_channel"
     private val PERMISSION_REQUEST_CODE = 100
 
